@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: outpass-request-system
+    runtime: python
+    buildCommand: python -m compileall -q new.py
+    startCommand: python new.py
+    envVars:
+      - key: OUTPASS_ADMIN_PASSWORD
+        sync: false
